@@ -14,10 +14,10 @@ function App() {
   console.log(istoggle);
   const dispatch=useDispatch();
   useEffect(()=>{
-    if(initial){
-      initial=false;
-      return;
-    }
+    // if(initial){
+    //   initial=false;
+    //   return;
+    // }
    dispatch(toggleAction.setNotification({status:'pending',title:'sending..',message:'sending data...'}))
    const updatedb=async()=>{
    const response=await fetch("https://shopping-cart-cb9ed-default-rtdb.firebaseio.com/cart.json",{method:'put',body:JSON.stringify(cart)})
